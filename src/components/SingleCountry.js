@@ -19,6 +19,10 @@ export default function SingleCountry() {
     getSingleCountry();
   }, [name]);
 
+  useEffect(() => {
+    document.title = `Countries | ${name}`;
+  }, [name]);
+
   return (
     <>
       <section className="p-8 md:py-0 max-w-7xl mx-auto">
